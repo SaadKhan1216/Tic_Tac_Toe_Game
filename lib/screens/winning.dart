@@ -10,17 +10,15 @@ class WinningScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: 380,
-        width: 369,
+        height: 360,
+        width: 360,
         decoration: BoxDecoration(
             color: colors,
             borderRadius: BorderRadius.circular(30)),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 51),
-              child: Image.asset('images/trophy.png', height: 212, width: 212),
-            ),
+            Image.asset('images/trophy.png', height: 212, width: 212),
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Text(
@@ -28,15 +26,12 @@ class WinningScreen extends StatelessWidget {
                 style: const TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 20),
-              child: Text(
-                status,
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold),
-              ),
+            Text(
+              status,
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold),
             )
           ],
         ),
