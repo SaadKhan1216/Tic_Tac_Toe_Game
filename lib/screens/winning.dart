@@ -4,7 +4,10 @@ class WinningScreen extends StatelessWidget {
   final String player;
   final String status;
   final Color colors;
-  const WinningScreen({required this.player, this.status = 'WON', this.colors = const Color(0xff0D47A1)});
+  const WinningScreen(
+      {required this.player,
+      this.status = 'WON',
+      this.colors = const Color(0xff0D47A1)});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +16,7 @@ class WinningScreen extends StatelessWidget {
         height: 360,
         width: 360,
         decoration: BoxDecoration(
-            color: colors,
-            borderRadius: BorderRadius.circular(30)),
+            color: colors, borderRadius: BorderRadius.circular(30)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
